@@ -1,0 +1,35 @@
+li a {
+    color: white;
+}
+
+div.title {
+    color: white;
+    border-radius:    25px;
+    background-color: #808080;
+    text-align:       center;
+    width:    320px;
+    height:   50px;
+    justify-content: center;
+    align-items:     center;
+    text-align:      center;
+    display: flex;
+}
+
+
+div.questions {
+    color: white;
+    border-radius:    25px;
+    background-color: #808080;
+    text-align:       center;
+    width:    320px;
+    height:   50px;
+    justify-content: center;
+    align-items:     center;
+    text-align:      center;
+    display: flex;
+}
+
+body
+    {
+        background: url('images/background.jpeg') no-repeat;
+    }

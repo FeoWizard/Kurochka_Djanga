@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Курочкин опросник</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'Kurochka_Polls/style.css' %}">
+    </head>
+    <body>
+        <div class="title">Это - главная страница опросника Курочки!</div>
+        <br>
+        <br>
+        <div class="questions">
+            {% if latest_question_list %}
+                <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="{% url 'Kurochka_Polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>Нет доступных опросов.</p>
+            {% endif %}
+        </div>
+    </body>
+</html>

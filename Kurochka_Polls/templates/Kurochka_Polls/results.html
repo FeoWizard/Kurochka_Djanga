@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты опроса #{{ question.id }}</title>
+</head>
+<body>
+<div>Вы смотрите на результаты опроса #{{ question.id }}.</div>
+<h1>Опрос: {{ question.question_text }}</h1>
+<ul>
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'Kurochka_Polls:detail' question.id %}">Проголосовать снова?</a>
+</body>
+</html>
